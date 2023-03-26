@@ -33,6 +33,18 @@ garpike and stingray are also present.'''
 ]
 users = ["bob", "ann", "mike", "liz"]
 passwords = ["123", "pass123", "password123", "pass123"]
+useres_passwords = dict(zip(users, passwords))
+separator = "*"*60
 ######################################################################################################################
+print(separator)
+print(f'LOGIN'.center(60))
+print('Please, enter your login information'.center(60))
+print(separator)
+user = input('User:')
+password = input('Password:')
+#login
 
+
+#volba_textu
+#analyza_textu
 
