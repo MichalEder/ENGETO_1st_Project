@@ -33,16 +33,23 @@ garpike and stingray are also present.'''
 ]
 users = ["bob", "ann", "mike", "liz"]
 passwords = ["123", "pass123", "password123", "pass123"]
-useres_passwords = dict(zip(users, passwords))
+users_passwords = dict(zip(users, passwords))
 separator = "*"*60
 ######################################################################################################################
 print(separator)
 print(f'LOGIN'.center(60))
-print('Please, enter your login information'.center(60))
+print('Please, enter your login credentials'.center(60))
 print(separator)
 user = input('User:')
 password = input('Password:')
-#login
+print(separator)
+if user in users_passwords.keys() and password == users_passwords[user]:
+    print(f'Welcome to app, {user}')
+    print('We have three texts to analzye')
+else:
+    print('INVALID LOGIN CREDENTIALS'.center(60))
+    quit
+
 
 
 #volba_textu
