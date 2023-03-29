@@ -61,7 +61,11 @@ print(f'Welcome to app, {user}')
 print('We have three texts to analyze')
 print(separator)
                                                                         #### TEXT-CHOICE ####
-text_choice = int(input('Enter number 1-3 to choose text for analysis: '))
+try:
+    text_choice = int(input('Enter number 1-3 to choose text for analysis: '))
+except ValueError:
+    print("Input is not number!")
+
 if text_choice not in range(1,4):
     print('INVALID CHOICE'.center(60))
     print('TERMINATING PROGRAM'.center(60))
